@@ -20,6 +20,7 @@ int main(int argc, char **argv)
 	if(argc<2){
 		printf("This program is used to rebuild an ELF binary file with executable shellcode\n");
 		printf("Usage: ./inject [file]\n");
+        exit(1);
 
 	}
 	char* filename = argv[1];
