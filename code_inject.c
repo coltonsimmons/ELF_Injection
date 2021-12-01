@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 	fread(headers, sizeof(headers), 1, ptr);
 	
 	fseek(ptr, 0L, SEEK_END);
-        u_int64_t sz = ftell(ptr);
+    u_int64_t sz = ftell(ptr);
 
 	fclose(ptr);
 	
@@ -136,11 +136,11 @@ int injection(char* filename, int offset, struct shellcode* code){
 	
 
 
-        FILE* fp = fopen(filename,"rb");
+    FILE* fp = fopen(filename,"rb");
 
-        fseek(fp, 0L, SEEK_END);
-        u_int64_t sz = ftell(fp);
-        rewind(fp);
+    fseek(fp, 0L, SEEK_END);
+    u_int64_t sz = ftell(fp);
+    rewind(fp);
 
 	//Calculate our offset address (hex of our eof)	
 	unsigned char bytes[8];
